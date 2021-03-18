@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteRule ^([^/\.]+)/?$ site.php?site=$1 [L]
+RewriteRule ^([^/]+)/([^/\.]+)/?$ pages.php?site=$1&pid=$2 [L,QSA]
+
+AddHandler application/x-httpd-php55 .php
+AddHandler application/x-httpd-php56 .php
+AddHandler application/x-httpd-php7 .php
+AddHandler application/x-httpd-php71 .php
